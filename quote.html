@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Random Quote Machine</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -14,38 +16,33 @@
   <script>
     $(document).ready(function() {
       $("#getQuote").on("click", function(){
-        $(".message").html("Here is the message");
+        $(".quote").html("Here is the message");
       });
     });
   </script>
     
 </head>
 <body>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <h2 class="text-center">Random Quote Machine</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p class="text-center message">Quote will go here</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col author">
-      <p class="text-center">Author will go here</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <button type="button" id="getQuote" class="btn btn-primary btn-block">
-        New Quote
-      </button>
-    </div>
-  </div>
+  
+<!-- Quote goes here here -->
+<div class="title">
+  <h2><i class="fas fa-quote-left"></i>&nbsp;&nbsp;<span class="quote">Quote goes here</span>&nbsp;&nbsp;<i class="fas fa-quote-right"></i></h2>
+  <h4>-&nbsp;<span class="author">Author goes here</span></h4>
+  <hr>
+  <a href="#">
+    <button class="btn btn-light btn-sm" id="getQuote"><i class="fas fa-book"></i> New Quote</button>
+  </a>
+  <a href="#">
+    <button class="btn btn-light btn-sm"><i class="far fa-newspaper"></i> Learn More</button>
+  </a>
+  <a href="#">
+    <button class="btn btn-light btn-sm"><i class="fab fa-twitter-square"></i> Tweet Quote</button>
+  </a>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 </body>
 </html>
