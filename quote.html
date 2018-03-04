@@ -3,8 +3,22 @@
 <head>
   <title>Random Quote Machine</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" type="text/css" href="quote.css">
   <script type="text/javascript" src="quote.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("#getQuote").on("click", function(){
+        $(".message").html("Here is the message");
+      });
+    });
+  </script>
+    
 </head>
 <body>
 
@@ -15,8 +29,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="col message">
-      <p class="text-center">Quote will go here</p>
+    <div class="col">
+      <p class="text-center message">Quote will go here</p>
     </div>
   </div>
   <div class="row">
@@ -26,7 +40,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <button id="getMessage" class="btn btn-primary btn-block">
+      <button type="button" id="getQuote" class="btn btn-primary btn-block">
         New Quote
       </button>
     </div>
