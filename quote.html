@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <title>Random Quote Machine</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -12,14 +13,6 @@
   </script>
   <link rel="stylesheet" type="text/css" href="quote.css">
   <script type="text/javascript" src="quote.js"></script>
-
-  <script>
-    $(document).ready(function() {
-      $("#getQuote").on("click", function(){
-        $(".quote").html("Here is the message");
-      });
-    });
-  </script>
     
 </head>
 <body>
@@ -29,12 +22,15 @@
   <h2><i class="fas fa-quote-left"></i>&nbsp;&nbsp;<span class="quote">Quote goes here</span>&nbsp;&nbsp;<i class="fas fa-quote-right"></i></h2>
   <h4>-&nbsp;<span class="author">Author goes here</span></h4>
   <hr>
+  <!-- This button will put new quote on page-->
   <a href="#">
     <button class="btn btn-light btn-sm" id="getQuote"><i class="fas fa-book"></i> New Quote</button>
   </a>
+  <!-- This button will allow users to google search more about author -->
   <a href="#">
     <button class="btn btn-light btn-sm"><i class="far fa-newspaper"></i> Learn More</button>
   </a>
+  <!-- This button will let user tweet current quote -->
   <a href="#">
     <button class="btn btn-light btn-sm"><i class="fab fa-twitter-square"></i> Tweet Quote</button>
   </a>
