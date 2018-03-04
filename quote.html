@@ -2,15 +2,36 @@
 <html>
 <head>
   <title>Random Quote Machine</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="quote.css">
   <script type="text/javascript" src="quote.js"></script>
 </head>
 <body>
 
-<h1>Random Quote Machine</h1>
-<h3 id="quote">Quote will go here</h3>
-<h4 id="quoteAuthor">Author will go here</h4>
-<button>New quote</button>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center">Random Quote Machine</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 message text-center">
+      Quote will go here
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 author text-center">
+      Author will go here
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-xs-12">
+      <button id="getMessage" class="btn btn-primary">
+        Get Message
+      </button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
