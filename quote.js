@@ -8,17 +8,22 @@ function getQuote() {
     var quotes = request.response;
 
     var current = Math.floor(Math.random() * quotes.length);
+    var currentQuote = quotes[current]['quoteText'];
+    var currentAuthor = quotes[current]['quoteAuthor'];
 
     // Replace quote text and author
-    $(".quote").html(quotes[current]['quoteText']);
-    if (quotes[current]['quoteAuthor'] === "") {
+    $(".quote").html(currentQuote);
+    if (currentAuthor === "") {
       $(".author").html("Unknown");
     } else {
-      $(".author").html(quotes[current]['quoteAuthor']);
+      $(".author").html(currentAuthor);
     }
 
     // Replace learn more button address with new author
-    $(".learnMore").attr('href', 'https://www.google.com/search?q=' + quotes[current]['quoteAuthor'])
+    $("#learnMore").attr('href', 'https://www.google.com/search?q=' + currentAuthor)
+
+    // Allow user to tweet current quote
+    $("#tweetQuote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quote,freeCodeCamp&related=freeCodeCamp&text="' + currentQuote + '" -' + currentAuthor);
   }
 }
 
