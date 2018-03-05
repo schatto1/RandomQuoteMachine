@@ -10,13 +10,15 @@ function getQuote() {
     var current = Math.floor(Math.random() * quotes.length);
 
     $(".quote").html(quotes[current]['quoteText']);
-    $(".author").html(quotes[current]['quoteAuthor']);
+    if (quotes[current]['quoteAuthor'] === "") {
+      $(".author").html("Unknown");
+    } else {
+      $(".author").html(quotes[current]['quoteAuthor']);
+    }
   }
 }
 
 $(document).ready(function() {
   getQuote();
-  $("#getQuote").on("click", getQuote); //function(){
-    //$(".quote").html("Here is the message");
-  //});
+  $("#getQuote").on("click", getQuote);
 });
