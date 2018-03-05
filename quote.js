@@ -9,21 +9,23 @@ function getQuote() {
 
     var current = Math.floor(Math.random() * quotes.length);
     var currentQuote = quotes[current]['quoteText'];
-    var currentAuthor = quotes[current]['quoteAuthor'];
+    if (quotes[current]['quoteAuthor'] === "") {
+      var currentAuthor = "Unknown";
+    } else {
+      var currentAuthor = quotes[current]['quoteAuthor'];
+    }
 
     // Replace quote text and author
     $(".quote").html(currentQuote);
-    if (currentAuthor === "") {
-      $(".author").html("Unknown");
-    } else {
-      $(".author").html(currentAuthor);
-    }
+    $(".author").html(currentAuthor);
 
     // Replace learn more button address with new author
     $("#learnMore").attr('href', 'https://www.google.com/search?q=' + currentAuthor)
 
     // Allow user to tweet current quote
     $("#tweetQuote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quote,freeCodeCamp&related=freeCodeCamp&text="' + currentQuote + '" -' + currentAuthor);
+
+    $(".title").fadeOut();
   }
 }
 
