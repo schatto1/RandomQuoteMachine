@@ -25,11 +25,15 @@ function getQuote() {
     // Allow user to tweet current quote
     $("#tweetQuote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quote,freeCodeCamp&related=freeCodeCamp&text="' + currentQuote + '" -' + currentAuthor);
 
-    $(".title").fadeOut();
+    $(".title").fadeIn('slow');
   }
 }
 
 $(document).ready(function() {
   getQuote();
-  $("#getQuote").on("click", getQuote);
+  $("#getQuote").on("click", function() {
+    $(".title").fadeOut('slow', function() {
+      getQuote();
+    });
+  });
 });
